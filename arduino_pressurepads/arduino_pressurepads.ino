@@ -1,3 +1,7 @@
+#define FORCE_SENSOR_PIN1 A0 
+#define FORCE_SENSOR_PIN2 A1 
+#define FORCE_SENSOR_PIN3 A2 
+
 unsigned long last_time = 0;
 
 void setup()
@@ -7,21 +11,17 @@ void setup()
 
 void loop()
 {
-    // Print a heartbeat
-    if (millis() > last_time + 2000)
-    {
-        Serial.println("Arduino is alive!!");
-        last_time = millis();
-    }
+    
+   int analogReading1 = analogRead(FORCE_SENSOR_PIN1);
+   int analogReading2 = analogRead(FORCE_SENSOR_PIN2);
+   int analogReading3 = analogRead(FORCE_SENSOR_PIN3);
 
-    // Send some message when I receive an 'A' or a 'Z'.
-    switch (Serial.read())
-    {
-        case 'A':
-            Serial.println("That's the first letter of the abecedarium.");
-            break;
-        case 'Z':
-            Serial.println("That's the last letter of the abecedarium.");
-            break;
-    }
+   if (analogReading1 > 5)     
+     Serial.println("Sensor1");
+   if (analogReading2 > 5)     
+     Serial.println("Sensor2");
+   if (analogReading3 > 5)     
+     Serial.println("Sensor3");
+ 
+   delay(200);
 }
