@@ -22,6 +22,7 @@ void loop()
      Serial.println("Sensor2");
    if (analogReading3 > 5)     
      Serial.println("Sensor3");
- 
+
+   Serial.println("No Signal");
    delay(200);
 }
