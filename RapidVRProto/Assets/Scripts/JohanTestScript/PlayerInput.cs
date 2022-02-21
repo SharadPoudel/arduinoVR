@@ -7,13 +7,15 @@ public class PlayerInput : MonoBehaviour
 {
     [SerializeField] private SerialController serialController;
     [SerializeField] private GameObject cube1, cube2, cube3;
+    private Renderer cube1R, cube2R, cube3R;
 
     
     void Start()
     {
         serialController = GameObject.Find("SerialController").GetComponent<SerialController>();
-
-        
+        cube1R = cube1.GetComponent<Renderer>();
+        cube2R = cube2.GetComponent<Renderer>();
+        cube3R = cube3.GetComponent<Renderer>();
     }
 
 
@@ -30,32 +32,35 @@ public class PlayerInput : MonoBehaviour
             Debug.Log("Connection attempt failed or disconnection detected");
         else
         {
-            Debug.Log("Message arrived: " + message);
-            switch (message)
-            {
-                case "Sensor1":
-                    cube1.GetComponent<Renderer>().material.color = Color.blue;
-                    break;
-                case "Sensor2":
-                    cube2.GetComponent<Renderer>().material.color = Color.blue;
-                    break;
-                case "Sensor3":
-                    cube3.GetComponent<Renderer>().material.color = Color.blue;
-                    break;
-                case "No Signal":
-                    cube1.GetComponent<Renderer>().material.color = Color.black;
-                    cube2.GetComponent<Renderer>().material.color = Color.black;
-                    cube3.GetComponent<Renderer>().material.color = Color.black;
-                    break;
-
-            }
+            Debug.Log("Message arrived: " + ChangeCubeColor(message));       
         }
             
     }
 
-    private void ChangeCubeColor(String message)
+    private String ChangeCubeColor(String message)
     {
-
+        switch (message)
+        {
+            case "S1On":
+                cube1R.material.color = Color.blue;
+                break;
+            case "S1Off":
+                cube1R.material.color = Color.black;
+                break;
+            case "S2On":
+                cube2R.material.color = Color.blue;
+                break;
+            case "S2Off":
+                cube2R.material.color = Color.black;
+                break;
+            case "S3On":
+                cube3R.material.color = Color.blue;
+                break;
+            case "S3Off":
+                cube3R.material.color = Color.black;
+                break;
+        }
+        return message;
     }
 }
 
