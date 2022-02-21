@@ -16,13 +16,19 @@ void loop()
    int analogReading2 = analogRead(FORCE_SENSOR_PIN2);
    int analogReading3 = analogRead(FORCE_SENSOR_PIN3);
 
-   if (analogReading1 > 5)     
-     Serial.println("Sensor1");
+   if (analogReading1 > 5)
+     Serial.println("S1On");
+   else
+     Serial.println("S1Off");
    if (analogReading2 > 5)     
-     Serial.println("Sensor2");
+     Serial.println("S2On");
+   else
+     Serial.println("S2Off");
    if (analogReading3 > 5)     
-     Serial.println("Sensor3");
+     Serial.println("S3On");
+   else
+     Serial.println("S3Off");
 
    
-   delay(200);
+   delay(16);
 }
