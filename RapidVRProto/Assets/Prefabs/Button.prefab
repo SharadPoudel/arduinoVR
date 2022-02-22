@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 362e7421f61851740a8b944e5138051c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonCoolDown: 0.5
+  sensorName: Sensor1
+  durationLimit: 0.5
   defaultColor: {fileID: 2100000, guid: b5bd424324505fe4bb03ef63e2ea2295, type: 2}
   pressedColor: {fileID: 2100000, guid: cc5ae42f0d4b1554ebdfcce439adf79d, type: 2}
-  sensorName: Sensor1

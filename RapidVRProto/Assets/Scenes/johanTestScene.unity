@@ -182,6 +182,14 @@ PrefabInstance:
       propertyPath: sensorName
       value: Sensor2
       objectReference: {fileID: 0}
+    - target: {fileID: 8448014066332810993, guid: 8ef9aca401db2f041bb5563f52fa8935, type: 3}
+      propertyPath: durationLimit
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448014066332810993, guid: 8ef9aca401db2f041bb5563f52fa8935, type: 3}
+      propertyPath: buttonPressDuration
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ef9aca401db2f041bb5563f52fa8935, type: 3}
 --- !u!114 &238765747 stripped
@@ -264,6 +272,14 @@ PrefabInstance:
     - target: {fileID: 8448014066332810993, guid: 8ef9aca401db2f041bb5563f52fa8935, type: 3}
       propertyPath: sensorName
       value: Sensor3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448014066332810993, guid: 8ef9aca401db2f041bb5563f52fa8935, type: 3}
+      propertyPath: durationLimit
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448014066332810993, guid: 8ef9aca401db2f041bb5563f52fa8935, type: 3}
+      propertyPath: buttonPressDuration
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ef9aca401db2f041bb5563f52fa8935, type: 3}
@@ -737,6 +753,14 @@ PrefabInstance:
     - target: {fileID: 1054577254173702646, guid: 8ef9aca401db2f041bb5563f52fa8935, type: 3}
       propertyPath: m_Name
       value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448014066332810993, guid: 8ef9aca401db2f041bb5563f52fa8935, type: 3}
+      propertyPath: durationLimit
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448014066332810993, guid: 8ef9aca401db2f041bb5563f52fa8935, type: 3}
+      propertyPath: buttonPressDuration
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ef9aca401db2f041bb5563f52fa8935, type: 3}
