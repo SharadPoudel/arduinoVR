@@ -15,6 +15,10 @@ public class GM : MonoBehaviour
     public Transform fountainFW;
     public string fountainSpawnL = "n";
     public string fountainSpawnR = "n";
+
+    public int choose2x = 0;
+
+    public static float totalScore = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +28,7 @@ public class GM : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timerReset == "y")
+        if ((timerReset == "y")&& noteMark<22)
             {
             StartCoroutine(spawnNote());
             timerReset = "n";

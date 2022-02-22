@@ -26,13 +26,15 @@ public class noteControl : MonoBehaviour
             Destroy(gameObject);
             Debug.Log("Fail!!!");
             Instantiate(failBurst, transform.position, failBurst.rotation);
+            GM.totalScore -= 1;
             }
         else if (other.gameObject.name == "Success")
             {
             Destroy(gameObject);
-            Debug.Log("Success!!!");
+            Debug.Log(GM.winStreak);
             Instantiate(sucessBurst, transform.position, failBurst.rotation);
             GM.winStreak += 1;
+            GM.totalScore += 10;
             }
 
         }
