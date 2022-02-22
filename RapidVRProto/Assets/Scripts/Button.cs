@@ -5,39 +5,70 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-    [SerializeField] private float buttonPressLimit = 1f;
-    [SerializeField] private Material defaultColor, pressedColor;
-    [SerializeField] private String sensorName;
+    public string sensorName;
 
-    private float cdCounter;
+    [SerializeField] private float durationLimit = 0.5f;
+    [SerializeField] private Material defaultColor, pressedColor;
+
+    private float buttonPressDuration = 0;
+    private Boolean pressing, colorLocked, holding = false;
     void Start()
     {
-        cdCounter = 0;
-        gameObject.GetComponent<Renderer>().material = default;
+       gameObject.GetComponent<Renderer>().material = defaultColor;
+
     }
 
-     
+
     void Update()
     {
-        cdCounter += Time.deltaTime;
+
     }
 
-    public String PressButton(String message)
+    public void PressButton(string status)
     {
-        //Getting the sensor name and if it should be on or off
-        String[] messageSplit = message.Split('_');
-        //Debug.Log("test");
-        if(messageSplit[0] == sensorName && messageSplit[1] == "On" && cdCounter <= buttonPressLimit)
+
+
+        colorLocked = (Time.time <= buttonPressDuration);
+        pressing = (status == "On");
+
+
+
+        if (!colorLocked)
         {
-            gameObject.GetComponent<Renderer>().material = pressedColor;
-            cdCounter = buttonPressLimit;
-            
-        }else 
-        {
-            gameObject.GetComponent<Renderer>().material = defaultColor;
-            cdCounter = 0;
+
+            if (pressing && !holding)
+            {
+                ChangeColor(pressedColor);
+                buttonPressDuration = (durationLimit + Time.time);
+                holding = true;
+                //Debug.Log( buttonPressDuration);
+            }
+            else if(!pressing)
+            {
+                ChangeColor(defaultColor);
+                holding = false;
+            }
+            else
+            {
+                ChangeColor(defaultColor);
+            }
         }
+        else
+        {
+            ChangeColor(pressedColor);
+            if (pressing)
+                holding = true;           
+        }
+
+        //Debug.Log(holding + "__" + Time.time + "__" + sensorName + "__" + gameObject.GetComponent<Renderer>().material);
         
-        return message;
+
     }
+
+    private void ChangeColor(Material material)
+    {
+        gameObject.GetComponent<Renderer>().material = material;
+    }
+
+
 }
