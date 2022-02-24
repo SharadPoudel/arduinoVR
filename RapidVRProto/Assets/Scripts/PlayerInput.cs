@@ -38,6 +38,7 @@ public class PlayerInput : MonoBehaviour
 
     private void CallingButtons(string message)
     {
+        //Debug.Log(message);
         foreach (Button button in buttons)
         {
             string[] messageSplit = message.Split('_');

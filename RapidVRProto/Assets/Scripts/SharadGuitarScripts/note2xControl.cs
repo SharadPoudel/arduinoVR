@@ -33,7 +33,21 @@ public class note2xControl : MonoBehaviour
             Debug.Log("Fail!!!");
             Instantiate(failBurst, transform.position, failBurst.rotation);
             }
+
+
+        else if (other.gameObject.CompareTag("Button"))
+        {
+            if (other.gameObject.GetComponent<Button>().buttonDown)
+                Destroy(gameObject);
+            Debug.Log(GM.winStreak);
+            Instantiate(sucessBurst, transform.position, failBurst.rotation);
+            GM.winStreak += 1;
+            GM.totalScore += 10;
         }
+    }
+
+
+
     void OnCollisionStay(Collision other)
         {
         if ((other.gameObject.name == "Success") && (String1.realeasedKey=="n"))

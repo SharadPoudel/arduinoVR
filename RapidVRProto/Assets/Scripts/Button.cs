@@ -6,15 +6,17 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     public string sensorName;
+    public bool buttonDown = false;
 
     [SerializeField] private float durationLimit = 0.5f;
-    [SerializeField] private Material defaultColor, pressedColor;
+    [SerializeField] public Material pressedColor, defaultColor;
 
     private float buttonPressDuration = 0;
-    private Boolean pressing, colorLocked, holding = false;
+    private bool pressing, colorLocked, holding = false;
+   
     void Start()
     {
-       gameObject.GetComponent<Renderer>().material = defaultColor;
+        gameObject.GetComponent<Renderer>().material = defaultColor;
 
     }
 
@@ -31,7 +33,7 @@ public class Button : MonoBehaviour
         colorLocked = (Time.time <= buttonPressDuration);
         pressing = (status == "On");
 
-
+       // Debug.Log("pressing");
 
         if (!colorLocked)
         {
@@ -39,29 +41,39 @@ public class Button : MonoBehaviour
             if (pressing && !holding)
             {
                 ChangeColor(pressedColor);
+                buttonDown = true;
                 buttonPressDuration = (durationLimit + Time.time);
                 holding = true;
-                //Debug.Log( buttonPressDuration);
+                
+                
+
+
+
+
+
             }
-            else if(!pressing)
+            else if (!pressing)
             {
                 ChangeColor(defaultColor);
+                buttonDown = false;
                 holding = false;
             }
             else
             {
                 ChangeColor(defaultColor);
+                buttonDown = false; ;
             }
         }
         else
         {
             ChangeColor(pressedColor);
+            buttonDown = true;
             if (pressing)
-                holding = true;           
+                holding = true;
         }
 
         //Debug.Log(holding + "__" + Time.time + "__" + sensorName + "__" + gameObject.GetComponent<Renderer>().material);
-        
+
 
     }
 
@@ -70,5 +82,11 @@ public class Button : MonoBehaviour
         gameObject.GetComponent<Renderer>().material = material;
     }
 
-
 }
+
+
+
+
+
+
+
