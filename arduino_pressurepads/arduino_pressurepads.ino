@@ -18,7 +18,7 @@ void loop()
    int analogReading3 = analogRead(FORCE_SENSOR_PIN3);
    int analogReading4 = analogRead(FORCE_SENSOR_PIN4);
 
-   /*if (analogReading1 > 5)
+   if (analogReading1 > 5)
      Serial.println("Sensor1_On");
    else
      Serial.println("Sensor1_Off");
@@ -29,7 +29,7 @@ void loop()
    if (analogReading3 > 5)     
      Serial.println("Sensor3_On");
    else
-     Serial.println("Sensor3_Off");*/
+     Serial.println("Sensor3_Off");
    if (analogReading4 > 5)     
      Serial.println("Sensor4_On");
    else

@@ -31,16 +31,25 @@ public class PlayerInput : MonoBehaviour
             Debug.Log("Connection attempt failed or disconnection detected");
         else
         {
-            foreach(Button button in buttons)
-            {
-                Debug.Log(button.GetComponent<Button>().PressButton(message));
-            }
-                   
+            CallingButtons(message);
+
         }
             
     }
 
-   
+    private void CallingButtons(string message)
+    {
+        //Debug.Log(message);
+        foreach (Button button in buttons)
+        {
+            string[] messageSplit = message.Split('_');
+            if (button.sensorName == messageSplit[0])
+                button.GetComponent<Button>().PressButton(messageSplit[1]);
+        }
+
+    }
+
+
 }
 
 
