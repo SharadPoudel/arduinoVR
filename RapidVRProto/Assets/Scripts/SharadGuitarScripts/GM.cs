@@ -65,12 +65,12 @@ public class GM : MonoBehaviour
             {
             xPos = .75f;
             }
-        
+        /*
         else if (whichNote[noteMark] == 5)
             {
             xPos = 1.5f;
             }
-        /* else if (whichNote[noteMark] == 6)
+         else if (whichNote[noteMark] == 6)
              {
              xPos = 1.45f;
              }*/
