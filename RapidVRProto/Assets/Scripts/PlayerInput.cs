@@ -7,14 +7,14 @@ public class PlayerInput : MonoBehaviour
 {
     [SerializeField] private SerialController serialController;
     [SerializeField] private Button[] buttons;
+    
 
-
-
+    
     void Start()
     {
         serialController = GameObject.Find("SerialController").GetComponent<SerialController>();
-
-
+        
+        
     }
 
 
@@ -31,28 +31,16 @@ public class PlayerInput : MonoBehaviour
             Debug.Log("Connection attempt failed or disconnection detected");
         else
         {
-            CallingButtons(message);
-        }
-
-    }
-
-    private void CallingButtons(string message)
-    {
-        //Debug.Log(message);
-        foreach (Button button in buttons)
-        {
-            string[] messageSplit = message.Split('_');
-            if (button.sensorName == messageSplit[0])
-                button.GetComponent<Button>().PressButton(messageSplit[1]);
-            if(messageSplit[0] == "Sensor1")
+            foreach(Button button in buttons)
             {
-                //Debug.Log(messageSplit[1] + "____" + Time.time);
+                Debug.Log(button.GetComponent<Button>().PressButton(message));
             }
-                
+                   
         }
+            
     }
 
-
+   
 }
 
 
