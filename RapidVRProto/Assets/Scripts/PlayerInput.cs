@@ -23,7 +23,7 @@ public class PlayerInput : MonoBehaviour
         string message = serialController.ReadSerialMessage();
 
         if (message == null)
-            return;
+        return;
 
         if (ReferenceEquals(message, SerialController.SERIAL_DEVICE_CONNECTED))
             Debug.Log("Connection established");
@@ -43,8 +43,14 @@ public class PlayerInput : MonoBehaviour
         foreach (Button button in buttons)
         {
             string[] messageSplit = message.Split('_');
-            if (button.sensorName == messageSplit[0])
-                button.GetComponent<Button>().PressButton(messageSplit[1]);
+            if (button.sensorName == messageSplit[0]) 
+            {
+                int force;
+                Int32.TryParse(messageSplit[1], out force);
+                button.GetComponent<Button>().PressButton(force);
+            }
+                
+
         }
 
     }

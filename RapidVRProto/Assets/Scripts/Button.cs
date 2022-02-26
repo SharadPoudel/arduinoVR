@@ -26,12 +26,12 @@ public class Button : MonoBehaviour
         
     }
 
-    public void PressButton(String status)
+    public void PressButton(int force)
     {
         colorLocked = (Time.time <= buttonPressDuration);
-        pressing = (status == "On");
+        pressing = (force >= 5);
 
-        // Debug.Log("pressing");
+        
 
         if (!colorLocked)
         {
@@ -39,26 +39,30 @@ public class Button : MonoBehaviour
             if (pressing && !holding)
             {
                 ChangeColor(pressedColor);
+                Debug.Log("PRESSING");
                 buttonDown = true;
                 buttonPressDuration = (durationLimit + Time.time);
                 holding = true;
 
             }
-            else if (!pressing)
+            else if (!pressing )
             {
                 ChangeColor(defaultColor);
                 buttonDown = false;
+                Debug.Log("STOPPED HOLDING");
                 holding = false;
             }
+            
             else
             {
                 ChangeColor(defaultColor);
+                Debug.Log("NOT PRESSING");
                 buttonDown = false; ;
             }
         }
         else
         {
-
+            Debug.Log("LOCKED");
             ChangeColor(pressedColor);
             buttonDown = true;
             if (pressing)
