@@ -6,7 +6,8 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     [HideInInspector] public string sensorName;
-    public bool buttonDown = false;
+    [HideInInspector] public bool buttonDown = false;
+    [HideInInspector] public int pressForce = 0;
 
 
     [SerializeField] private float durationLimit = 0.5f;
@@ -23,7 +24,11 @@ public class Button : MonoBehaviour
 
     void Update()
     {
-        
+        if (buttonDown)
+            ChangeColor(pressedColor);
+        else
+            ChangeColor(defaultColor);
+
     }
 
     public void PressButton(int force)
@@ -31,39 +36,29 @@ public class Button : MonoBehaviour
         colorLocked = (Time.time <= buttonPressDuration);
         pressing = (force >= 5);
 
-        
+
 
         if (!colorLocked)
         {
-
             if (pressing && !holding)
             {
-                ChangeColor(pressedColor);
-                Debug.Log("PRESSING");
+                pressForce = force;
                 buttonDown = true;
                 buttonPressDuration = (durationLimit + Time.time);
                 holding = true;
-
             }
-            else if (!pressing )
+            else if (!pressing)
             {
-                ChangeColor(defaultColor);
                 buttonDown = false;
-                Debug.Log("STOPPED HOLDING");
                 holding = false;
             }
-            
             else
             {
-                ChangeColor(defaultColor);
-                Debug.Log("NOT PRESSING");
                 buttonDown = false; ;
             }
         }
         else
         {
-            Debug.Log("LOCKED");
-            ChangeColor(pressedColor);
             buttonDown = true;
             if (pressing)
                 holding = true;
