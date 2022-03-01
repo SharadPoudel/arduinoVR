@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Note : MonoBehaviour
 {
-    public float speed;
+    [SerializeField] private float speed;
+    [SerializeField] private bool pressable;
     void Start()
     {
         
@@ -16,4 +17,6 @@ public class Note : MonoBehaviour
         Debug.Log(Time.deltaTime);
         transform.Translate(0, 0, -speed * Time.deltaTime);
     }
+
+
 }
