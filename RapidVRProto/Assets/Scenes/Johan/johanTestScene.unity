@@ -263,7 +263,7 @@ Transform:
   m_LocalScale: {x: 0.6666667, y: 1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 732762770}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &410047715
 MonoBehaviour:
@@ -521,12 +521,12 @@ Transform:
   - {fileID: 1238027404}
   - {fileID: 1179106235}
   - {fileID: 1235677832}
-  - {fileID: 1984374773}
   - {fileID: 1223993613}
   - {fileID: 1458091930}
   - {fileID: 1930490780}
   - {fileID: 410047714}
   - {fileID: 1364822416}
+  - {fileID: 1984374773}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -543,9 +543,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDelay: 2.3
-  bpm: 0
+  bpm: 164
   audioSource: {fileID: 0}
-  noteList: []
+  lanePositions:
+  - -3
+  - -1
+  - 1
+  - 3
+  noteList:
+  - beatNumber: 0
+    lane: 1
+    parent: {fileID: 0}
+    noteType: {fileID: 1984374768}
+  - beatNumber: 1
+    lane: 2
+    parent: {fileID: 0}
+    noteType: {fileID: 1984374768}
+  - beatNumber: 2
+    lane: 3
+    parent: {fileID: 0}
+    noteType: {fileID: 1984374768}
+  - beatNumber: 3
+    lane: 4
+    parent: {fileID: 0}
+    noteType: {fileID: 1984374768}
 --- !u!82 &732762772
 AudioSource:
   m_ObjectHideFlags: 0
@@ -901,7 +922,7 @@ Transform:
   m_LocalScale: {x: 0.6666667, y: 1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 732762770}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1235677832 stripped
 Transform:
@@ -956,7 +977,7 @@ Transform:
   m_LocalScale: {x: 0.6666667, y: 1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 732762770}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1364822417
 MonoBehaviour:
@@ -1153,7 +1174,7 @@ Transform:
   m_LocalScale: {x: 0.6666667, y: 1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 732762770}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1479575421
 GameObject:
@@ -1436,7 +1457,7 @@ Transform:
   m_LocalScale: {x: 0.6666667, y: 1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 732762770}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1930490781
 MonoBehaviour:
@@ -1622,7 +1643,7 @@ Transform:
   m_LocalScale: {x: 0.6666667, y: 1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 732762770}
-  m_RootOrder: 4
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1054577253894418396
 PrefabInstance:
