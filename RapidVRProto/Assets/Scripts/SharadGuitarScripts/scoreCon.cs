@@ -13,6 +13,6 @@ public class scoreCon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<TextMesh>().text = "Score : " + GM.totalScore;
+        GetComponent<TextMesh>().text = "SCORE - " + GM.totalScore;
     }
 }
