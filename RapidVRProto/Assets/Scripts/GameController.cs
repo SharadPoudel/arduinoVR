@@ -5,35 +5,45 @@ using System;
 
 public class GameController : MonoBehaviour
 {
-    
-    [SerializeField] private float startDelay = 2;
+    [SerializeField] private float noteSpeed;
+    [SerializeField] private float startDelay;
     [SerializeField] private float bpm;
-    [SerializeField] AudioSource audioSource;
-    [SerializeField] private float[] lanePositions;
+    [SerializeField] private float[] lanePosX;
     [SerializeField] private NoteInfo[] noteList;
+    
 
-
+    
     private float beatLength;
+    private bool playingMusic = false;
+    private AudioSource audioSource;
 
     void Start()
     {
         audioSource = gameObject.GetComponent<AudioSource>();
-        audioSource.PlayDelayed(startDelay);
-        beatLength = 60 / bpm;
-        foreach(NoteInfo note in noteList)
-        {
-            float noteXpos = lanePositions[note.lane - 1];
-            float noteZpos = note.beatNumber * beatLength;
-            GameObject newNote = Instantiate(note.noteType, new Vector3(noteXpos, 0, noteZpos), Quaternion.identity);
-            newNote.transform.SetParent(transform);
-        }
+        PLacingNotes();
     }
 
 
     void Update()
     {
+        if (!playingMusic && Time.time >= startDelay)
+        {
+            audioSource.Play();
+            playingMusic = true;
+        }
+    }
 
-        
+    void PLacingNotes()
+    {
+        beatLength = 60 / bpm;
+        foreach (NoteInfo note in noteList)
+        {
+            float noteXpos = lanePosX[note.lane - 1];
+            //The distance between notes     +   The distance from buttons
+            float noteZpos = (note.beatNumber * beatLength * noteSpeed) + (startDelay * noteSpeed);
+            GameObject newNote = Instantiate(note.noteType, transform.position + new Vector3(noteXpos, note.noteType.GetComponent<Collider>().bounds.size.y, noteZpos), Quaternion.identity, gameObject.transform);
+            newNote.GetComponent<Note>().speed = noteSpeed;
+        }
     }
 }
 
@@ -41,8 +51,6 @@ public class GameController : MonoBehaviour
 public struct NoteInfo
 {
     public int beatNumber, lane;
-    public Transform parent;
-    public GameObject noteType;
-
-    
+    public GameObject noteType;   
 }
+

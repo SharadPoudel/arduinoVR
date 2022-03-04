@@ -249,7 +249,7 @@ public abstract class AbstractSerialThread
             object inputMessage = ReadFromWire(serialPort);
             if (inputMessage != null)
             {
-                Debug.Log(inputQueue.Count);
+                //Debug.Log(inputQueue.Count);
                 if (inputQueue.Count < maxUnreadMessages)
                 {
                     inputQueue.Enqueue(inputMessage);
