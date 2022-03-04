@@ -12,6 +12,7 @@ public class Button : MonoBehaviour
 
     [SerializeField] private float durationLimit = 0.5f;
     [SerializeField] public Material pressedColor, defaultColor;
+    [SerializeField] private KeyCode key;
 
     private float buttonPressDuration = 0;
     private bool pressing, colorLocked, holding = false;
@@ -24,6 +25,15 @@ public class Button : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(key))
+            buttonDown = true;
+        else
+            buttonDown = false;
+
+
+
+
+
         if (buttonDown)
             ChangeColor(pressedColor);
         else
@@ -35,7 +45,6 @@ public class Button : MonoBehaviour
     {
         colorLocked = (Time.time <= buttonPressDuration);
         pressing = (force >= 5);
-
 
 
         if (!colorLocked)

@@ -41,7 +41,8 @@ public class GameController : MonoBehaviour
             float noteXpos = lanePosX[note.lane - 1];
             //The distance between notes     +   The distance from buttons
             float noteZpos = (note.beatNumber * beatLength * noteSpeed) + (startDelay * noteSpeed);
-            GameObject newNote = Instantiate(note.noteType, transform.position + new Vector3(noteXpos, note.noteType.GetComponent<Collider>().bounds.size.y, noteZpos), Quaternion.identity, gameObject.transform);
+            GameObject newNote = Instantiate(note.noteType, transform.position + new Vector3(noteXpos, 0.6f, noteZpos), Quaternion.identity, gameObject.transform);
+            //newNote.transform.localRotation = gameObject.transform.rotation;
             newNote.GetComponent<Note>().speed = noteSpeed;
         }
     }
