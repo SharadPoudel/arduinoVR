@@ -25,6 +25,9 @@ public class Note : MonoBehaviour
         if (other.CompareTag("Button") && other.GetComponent<Button>().buttonDown)
         {
             Destroy(gameObject);
+        }else if (other.CompareTag("Fail"))
+        {
+            Destroy(gameObject);
         }
     }
 }

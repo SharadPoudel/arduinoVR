@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 1054577254173702642}
   - component: {fileID: 1054577254173702641}
   - component: {fileID: 1054577254173702640}
-  - component: {fileID: 1054577254173702647}
   - component: {fileID: 8448014066332810993}
   - component: {fileID: 8098796966583943857}
   - component: {fileID: 616659536}
   - component: {fileID: 616659537}
+  - component: {fileID: 7386918522791531224}
   m_Layer: 0
   m_Name: Button
   m_TagString: Button
@@ -87,19 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1054577254173702647
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1054577254173702646}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8448014066332810993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,3 +234,17 @@ MonoBehaviour:
   seeThroughBorderColor: {r: 0, g: 0, b: 0, a: 1}
   seeThroughBorderWidth: 0.45
   rmsCount: 1
+--- !u!136 &7386918522791531224
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054577254173702646}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.50000006
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.00000005960464, y: 0, z: -0.00000008940696}
