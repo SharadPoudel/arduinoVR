@@ -21,10 +21,8 @@ public class PlayerInput : MonoBehaviour
     void Update()
     {
         string message = serialController.ReadSerialMessage();
-
         if (message == null)
             return;
-
         if (ReferenceEquals(message, SerialController.SERIAL_DEVICE_CONNECTED))
             Debug.Log("Connection established");
         else if (ReferenceEquals(message, SerialController.SERIAL_DEVICE_DISCONNECTED))
@@ -34,6 +32,7 @@ public class PlayerInput : MonoBehaviour
             CallingButtons(message);
 
         }
+
 
     }
 
