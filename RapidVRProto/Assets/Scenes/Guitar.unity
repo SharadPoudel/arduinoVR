@@ -13120,6 +13120,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SerialController
       objectReference: {fileID: 0}
+    - target: {fileID: 128384, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 405068, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -13166,7 +13170,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: portName
-      value: COM11
+      value: COM5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
@@ -13176,7 +13184,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1626242203}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bc5f48af2cffd747a079fe8c632e2c8, type: 3}
   m_Name: 
@@ -15300,9 +15308,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5103149458272347865, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.72
+      objectReference: {fileID: 0}
     - target: {fileID: 5103149458436144802, guid: 431043790b030e94f8468059fe6fb166, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.2
+      value: 0.52
       objectReference: {fileID: 0}
     - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
       propertyPath: noteList.Array.size
@@ -15400,6 +15412,10 @@ PrefabInstance:
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 659536645}
+    - target: {fileID: 5103149460099338581, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.12
+      objectReference: {fileID: 0}
     - target: {fileID: 5103149460278054671, guid: 431043790b030e94f8468059fe6fb166, type: 3}
       propertyPath: triggerMode
       value: 0
@@ -15408,6 +15424,10 @@ PrefabInstance:
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 659536645}
+    - target: {fileID: 5219842433300434093, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.12
+      objectReference: {fileID: 0}
     - target: {fileID: 5219842433479152375, guid: 431043790b030e94f8468059fe6fb166, type: 3}
       propertyPath: triggerMode
       value: 0
@@ -15416,6 +15436,14 @@ PrefabInstance:
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 659536645}
+    - target: {fileID: 5219842433787828791, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5219842434186749101, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 431043790b030e94f8468059fe6fb166, type: 3}
 --- !u!1001 &1975380638
