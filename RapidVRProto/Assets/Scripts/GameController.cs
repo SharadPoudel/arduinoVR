@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour
         {
             audioSource.Play();
             playingMusic = true;
+ 
         }
     }
 

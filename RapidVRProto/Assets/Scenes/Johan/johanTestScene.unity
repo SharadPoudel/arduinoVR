@@ -202,7 +202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: portName
-      value: COM6
+      value: COM5
       objectReference: {fileID: 0}
     - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: maxUnreadMessages
@@ -504,6 +504,66 @@ PrefabInstance:
       propertyPath: pressedColor
       value: 
       objectReference: {fileID: 2100000, guid: cc5ae42f0d4b1554ebdfcce439adf79d, type: 2}
+    - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: noteSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: noteList.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: noteList.Array.data[3].noteType
+      value: 
+      objectReference: {fileID: 9117297494439770515, guid: e8b6dca1a6d78424996b5eb7fd7d2f9c, type: 3}
+    - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: noteList.Array.data[4].noteType
+      value: 
+      objectReference: {fileID: 9117297494439770515, guid: e8b6dca1a6d78424996b5eb7fd7d2f9c, type: 3}
+    - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: noteList.Array.data[5].noteType
+      value: 
+      objectReference: {fileID: 9117297494439770515, guid: e8b6dca1a6d78424996b5eb7fd7d2f9c, type: 3}
+    - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: noteList.Array.data[0].beatNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: noteList.Array.data[1].beatNumber
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: noteList.Array.data[2].beatNumber
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: noteList.Array.data[3].beatNumber
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: noteList.Array.data[4].beatNumber
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: noteList.Array.data[5].beatNumber
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: noteList.Array.data[6].beatNumber
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: noteList.Array.data[7].beatNumber
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: noteList.Array.data[8].beatNumber
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: noteList.Array.data[9].beatNumber
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5103149459059604427, guid: 431043790b030e94f8468059fe6fb166, type: 3}
       propertyPath: m_RootOrder
       value: 4

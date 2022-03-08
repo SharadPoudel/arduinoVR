@@ -5,8 +5,9 @@ using UnityEngine;
 public class Note : MonoBehaviour
 {
     [HideInInspector] public float speed;
+    public int forceLimit;
 
-    void Start()
+   void Start()
     {
 
     }
@@ -22,10 +23,12 @@ public class Note : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Button") && other.GetComponent<Button>().buttonDown)
+        if (other.CompareTag("Button"))
         {
+            if(other.GetComponent<Button>().buttonDown && other.GetComponent<Button>().pressForce >= forceLimit)
             Destroy(gameObject);
-        }else if (other.CompareTag("Fail"))
+        }
+        else if (other.CompareTag("Fail"))
         {
             Destroy(gameObject);
         }

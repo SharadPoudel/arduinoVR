@@ -24,11 +24,11 @@ public class Button : MonoBehaviour
 
 
     void Update()
-    {
+    {/*
         if (Input.GetKey(key))
             buttonDown = true;
         else
-            buttonDown = false;
+            buttonDown = false;*/
 
 
 
@@ -52,6 +52,7 @@ public class Button : MonoBehaviour
             if (pressing && !holding)
             {
                 pressForce = force;
+                Debug.Log(pressForce);
                 buttonDown = true;
                 buttonPressDuration = (durationLimit + Time.time);
                 holding = true;
