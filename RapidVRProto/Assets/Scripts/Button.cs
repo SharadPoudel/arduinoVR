@@ -24,11 +24,18 @@ public class Button : MonoBehaviour
 
 
     void Update()
-    {/*
+    {
         if (Input.GetKey(key))
+        {
+            pressForce = 800;
             buttonDown = true;
+        }
         else
-            buttonDown = false;*/
+        {
+            pressForce = 6;
+            buttonDown = false;
+        }
+            
 
 
 
