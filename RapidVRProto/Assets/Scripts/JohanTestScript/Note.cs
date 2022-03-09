@@ -5,6 +5,7 @@ using UnityEngine;
 public class Note : MonoBehaviour
 {
     [HideInInspector] public float speed;
+    [SerializeField] private ParticleSystem hitParticle;
     public int forceLimit;
 
    void Start()
@@ -25,8 +26,13 @@ public class Note : MonoBehaviour
     {
         if (other.CompareTag("Button"))
         {
-            if(other.GetComponent<Button>().buttonDown && other.GetComponent<Button>().pressForce >= forceLimit)
-            Destroy(gameObject);
+            if (other.GetComponent<Button>().buttonDown && other.GetComponent<Button>().pressForce >= forceLimit)
+            {
+                ParticleSystem ps = Instantiate(hitParticle, gameObject.transform.position, Quaternion.identity);
+                Destroy(ps.gameObject, 5f);
+                Destroy(gameObject);
+            }
+            
         }
         else if (other.CompareTag("Fail"))
         {
