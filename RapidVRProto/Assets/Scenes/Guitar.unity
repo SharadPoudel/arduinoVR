@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.095989294, g: 0.031380355, b: 0.0056572277, a: 1}
+  m_IndirectSpecularColor: {r: 0.09606321, g: 0.03145258, b: 0.005673679, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13122,7 +13122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 128384, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 405068, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: m_RootOrder
@@ -15323,7 +15323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
       propertyPath: bpm
-      value: 160
+      value: 168
       objectReference: {fileID: 0}
     - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
       propertyPath: noteSpeed
