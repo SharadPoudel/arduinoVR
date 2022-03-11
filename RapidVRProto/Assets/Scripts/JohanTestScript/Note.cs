@@ -5,9 +5,13 @@ using UnityEngine;
 public class Note : MonoBehaviour
 {
     [HideInInspector] public float speed;
-    public int forceLimit;
+    
+    [SerializeField] private int forceLimit, value;
+    [SerializeField] private ParticleSystem hitParticle;
 
-   void Start()
+
+
+    void Start()
     {
 
     }
@@ -20,8 +24,22 @@ public class Note : MonoBehaviour
 
     }
 
+    public int Hit(float forceValue)
+    {
+        if (forceValue >= forceLimit)
+        {
+            ParticleSystem ps = Instantiate(hitParticle, gameObject.transform.position, Quaternion.identity);
+            Destroy(ps.gameObject, 5f);
+            Destroy(gameObject);
+            return value;
+        }
+        else
+            return 0;
+       
+    }
 
-    private void OnTriggerStay(Collider other)
+
+  /*  private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Button"))
         {
@@ -32,5 +50,5 @@ public class Note : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
+    }*/
 }
