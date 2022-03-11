@@ -109,4 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+<<<<<<< HEAD
+=======
+  hitParticle: {fileID: 154231485901704792, guid: 371e3014bc7515f4fbf85020dec5315c, type: 3}
+>>>>>>> 38fb6d146284957dff9f408ff38d027e7f323c50
   forceLimit: 0
