@@ -14565,7 +14565,6 @@ MonoBehaviour:
   - {fileID: 587573351}
   - {fileID: 356797423}
   - {fileID: 586699808}
-  - {fileID: 586699808}
 --- !u!4 &1888862387
 Transform:
   m_ObjectHideFlags: 0
@@ -15309,8 +15308,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3742323536694993838, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: pressedColor
+      value: 
+      objectReference: {fileID: 2100000, guid: cc5ae42f0d4b1554ebdfcce439adf79d, type: 2}
+    - target: {fileID: 3742323536694993838, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: durationLimit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3742323536825474356, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: pressedColor
+      value: 
+      objectReference: {fileID: 2100000, guid: ef2c3380ea506a54a96b15b9518d303e, type: 2}
+    - target: {fileID: 3742323536825474356, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: durationLimit
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3742323537279306670, guid: 431043790b030e94f8468059fe6fb166, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3742323537279306670, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: pressedColor
+      value: 
+      objectReference: {fileID: 2100000, guid: 202c5159be2241d4682cfcbb8d30c7d2, type: 2}
+    - target: {fileID: 3742323537279306670, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: durationLimit
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417462791276680790, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: pressedColor
+      value: 
+      objectReference: {fileID: 2100000, guid: 1c5a335489a263f458754f8cde45f221, type: 2}
+    - target: {fileID: 4417462791276680790, guid: 431043790b030e94f8468059fe6fb166, type: 3}
+      propertyPath: durationLimit
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5103149458272347865, guid: 431043790b030e94f8468059fe6fb166, type: 3}
