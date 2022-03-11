@@ -13,6 +13,7 @@ public class Button : MonoBehaviour
     [SerializeField] private float durationLimit = 0.5f;
     [SerializeField] public Material pressedColor, defaultColor;
     [SerializeField] private KeyCode key;
+    [SerializeField] private GameController gc;
 
     private float buttonPressDuration = 0;
     private bool pressing, colorLocked, holding = false;
@@ -32,14 +33,10 @@ public class Button : MonoBehaviour
         }
         else
         {
-            pressForce = 6;
+            pressForce = 0;
             buttonDown = false;
         }
             
-
-
-
-
 
         if (buttonDown)
             ChangeColor(pressedColor);
@@ -79,6 +76,22 @@ public class Button : MonoBehaviour
             buttonDown = true;
             if (pressing)
                 holding = true;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Note"))
+        {
+            Debug.Log("hit");
+            Note note = other.gameObject.GetComponent<Note>();
+            if (buttonDown)
+            {
+                gc.addScore(note.Hit(pressForce));
+                
+            }
+                
+
         }
     }
 

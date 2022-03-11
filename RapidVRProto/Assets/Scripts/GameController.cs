@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 public class GameController : MonoBehaviour
@@ -10,12 +11,13 @@ public class GameController : MonoBehaviour
     [SerializeField] private float bpm;
     [SerializeField] private float[] lanePosX;
     [SerializeField] private NoteInfo[] noteList;
-    
+    [SerializeField] private Text scoreLabel;
 
     
     private float beatLength;
     private bool playingMusic = false;
     private AudioSource audioSource;
+    private int score;
 
     void Start()
     {
@@ -30,11 +32,12 @@ public class GameController : MonoBehaviour
         {
             audioSource.Play();
             playingMusic = true;
- 
         }
+
+        scoreLabel.text = score.ToString();
     }
 
-    void PLacingNotes()
+    private void PLacingNotes()
     {
         beatLength = 60 / bpm;
         foreach (NoteInfo note in noteList)
@@ -46,6 +49,11 @@ public class GameController : MonoBehaviour
             //newNote.transform.localRotation = gameObject.transform.rotation;
             newNote.GetComponent<Note>().speed = noteSpeed;
         }
+    }
+
+    public void addScore(int noteValue)
+    {
+        score += noteValue;
     }
 }
 

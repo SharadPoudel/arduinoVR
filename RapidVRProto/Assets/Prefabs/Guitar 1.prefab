@@ -249,6 +249,7 @@ MonoBehaviour:
   - beatNumber: 10
     lane: 1
     noteType: {fileID: 5796860929473499946, guid: 9540b87af018f864ab79d4d72ebbbfe6, type: 3}
+  scoreLabel: 0
 --- !u!82 &5103149459059604426
 AudioSource:
   m_ObjectHideFlags: 0
@@ -417,6 +418,10 @@ PrefabInstance:
       value: Button (3)
       objectReference: {fileID: 0}
     - target: {fileID: 8448014066332810993, guid: 8ef9aca401db2f041bb5563f52fa8935, type: 3}
+      propertyPath: gc
+      value: 
+      objectReference: {fileID: 5103149459059604425}
+    - target: {fileID: 8448014066332810993, guid: 8ef9aca401db2f041bb5563f52fa8935, type: 3}
       propertyPath: key
       value: 97
       objectReference: {fileID: 0}
@@ -506,6 +511,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8448014066332810993, guid: 8ef9aca401db2f041bb5563f52fa8935, type: 3}
+      propertyPath: gc
+      value: 
+      objectReference: {fileID: 5103149459059604425}
     - target: {fileID: 8448014066332810993, guid: 8ef9aca401db2f041bb5563f52fa8935, type: 3}
       propertyPath: key
       value: 100
@@ -597,6 +606,10 @@ PrefabInstance:
       value: Button (2)
       objectReference: {fileID: 0}
     - target: {fileID: 8448014066332810993, guid: 8ef9aca401db2f041bb5563f52fa8935, type: 3}
+      propertyPath: gc
+      value: 
+      objectReference: {fileID: 5103149459059604425}
+    - target: {fileID: 8448014066332810993, guid: 8ef9aca401db2f041bb5563f52fa8935, type: 3}
       propertyPath: key
       value: 115
       objectReference: {fileID: 0}
@@ -686,6 +699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
+    - target: {fileID: 8448014066332810993, guid: 8ef9aca401db2f041bb5563f52fa8935, type: 3}
+      propertyPath: gc
+      value: 
+      objectReference: {fileID: 5103149459059604425}
     - target: {fileID: 8448014066332810993, guid: 8ef9aca401db2f041bb5563f52fa8935, type: 3}
       propertyPath: key
       value: 102
