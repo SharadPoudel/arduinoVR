@@ -111,5 +111,5 @@ MonoBehaviour:
   speed: 20
   forceLimit: 0
   value: 10
-  passText: {fileID: 5426826563331967643, guid: 482918779a94c6345a64d33737e0ec63, type: 3}
-  perfectText: {fileID: 2696586808131413403, guid: 502b7eff2e2814446af03a762ff760cd, type: 3}
+  passText: {fileID: 2696586808131413403, guid: 502b7eff2e2814446af03a762ff760cd, type: 3}
+  perfectText: {fileID: 5426826563331967643, guid: 482918779a94c6345a64d33737e0ec63, type: 3}
