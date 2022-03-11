@@ -12,7 +12,9 @@ public class Button : MonoBehaviour
 
     [SerializeField] private float durationLimit = 0.5f;
     [SerializeField] public Material pressedColor, defaultColor;
+    [SerializeField] private bool keyboardMode;
     [SerializeField] private KeyCode key;
+    [SerializeField] private GameController gc;
 
     private float buttonPressDuration = 0;
     private bool pressing, colorLocked, holding = false;
@@ -25,22 +27,10 @@ public class Button : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(key))
-        {
-            pressForce = 800;
-            buttonDown = true;
-        }
-        else
-        {
-            pressForce = 6;
-            buttonDown = false;
-        }
-            
-
-
-
-
-
+        if (keyboardMode)
+            keyBoardInput();
+ 
+        
         if (buttonDown)
             ChangeColor(pressedColor);
         else
@@ -82,9 +72,38 @@ public class Button : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Note"))
+        {
+            Note note = other.gameObject.GetComponent<Note>();
+            if (buttonDown)
+            {
+                gc.addScore(note.Hit(pressForce));
+                
+            }
+                
+
+        }
+    }
+
     private void ChangeColor(Material material)
     {
         gameObject.GetComponent<Renderer>().material = material;
+    }
+
+    private void keyBoardInput()
+    {
+        if (Input.GetKey(key))
+         {
+             pressForce = 800;
+             buttonDown = true;
+         }
+         else
+         {
+             pressForce = 6;
+             buttonDown = false;
+         }
     }
 }
 

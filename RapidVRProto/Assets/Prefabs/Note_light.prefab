@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5796860929473499947}
   m_Layer: 0
   m_Name: Note_light
-  m_TagString: Untagged
+  m_TagString: Note
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,4 +109,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  pressable: 0
+  forceLimit: 0
+  value: 10
+  hitParticle: {fileID: 154231485901704792, guid: 371e3014bc7515f4fbf85020dec5315c, type: 3}
