@@ -7,7 +7,7 @@ public class Note : MonoBehaviour
     [HideInInspector] public float speed;
     
     [SerializeField] private int forceLimit, value;
-    [SerializeField] private ParticleSystem hitParticle;
+    [SerializeField] private GameObject passText, perfectText;
 
 
 
@@ -28,8 +28,8 @@ public class Note : MonoBehaviour
     {
         if (forceValue >= forceLimit)
         {
-            ParticleSystem ps = Instantiate(hitParticle, gameObject.transform.position, Quaternion.identity);
-            Destroy(ps.gameObject, 5f);
+            GameObject gb = Instantiate(passText, gameObject.transform.position + new Vector3(0, 0.5f, 0), Quaternion.Euler(90, 0, 180));
+            Destroy(gb.gameObject, 0.5f);
             Destroy(gameObject);
             return value;
         }
