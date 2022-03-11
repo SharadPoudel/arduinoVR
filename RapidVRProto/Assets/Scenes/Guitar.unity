@@ -15662,7 +15662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
       propertyPath: bpm
-      value: 160
+      value: 168
       objectReference: {fileID: 0}
     - target: {fileID: 5103149459059604425, guid: 431043790b030e94f8468059fe6fb166, type: 3}
       propertyPath: noteSpeed
