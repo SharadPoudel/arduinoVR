@@ -32,8 +32,9 @@ public class GameController : MonoBehaviour
         {
             audioSource.Play();
             playingMusic = true;
+            Debug.Log(Time.time);
         }
-
+        
         scoreLabel.text = score.ToString();
     }
 
