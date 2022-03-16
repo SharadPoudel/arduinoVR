@@ -18,13 +18,13 @@ void loop()
    analogReading3 = analogRead(FORCE_SENSOR_PIN3);
    analogReading4 = analogRead(FORCE_SENSOR_PIN4);
 
-   //if (analogReading1 > 5)
+   //if (analogReading1 > 50)
      Serial.println("Sensor1_" + String(analogReading1));
-   //if (analogReading2 > 5)     
+   //if (analogReading2 > 50)     
      Serial.println("Sensor2_" + String(analogReading2));
-   //if (analogReading3 > 5)     
+   //if (analogReading3 > 50)     
      Serial.println("Sensor3_" + String(analogReading3));
-   //if (analogReading4 > 5)     
+   //if (analogReading4 > 50)     
      Serial.println("Sensor4_" + String(analogReading4));
 
    
