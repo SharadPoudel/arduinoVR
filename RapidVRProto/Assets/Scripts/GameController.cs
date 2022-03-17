@@ -1,28 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
 
 public class GameController : MonoBehaviour
 {
+    public GameObject postGameUI;
     [SerializeField] private float noteSpeed;
     [SerializeField] private float startDelay;
     [SerializeField] private float bpm;
     [SerializeField] private float[] lanePosX;
+    [SerializeField] private Text scoreLabel, postGameScoreLabel;
+   
+
     [SerializeField] private NoteInfo[] noteList;
-    [SerializeField] private Text scoreLabel;
 
     
     private float beatLength;
-    private bool playingMusic = false;
+    private bool playingMusic, gameOver;
     private AudioSource audioSource;
     private int score;
 
+    
+
     void Start()
     {
+       
         audioSource = gameObject.GetComponent<AudioSource>();
+        postGameUI.SetActive(false);
         PLacingNotes();
+        Invoke("postGameScreen", startDelay + audioSource.clip.length);
     }
 
 
@@ -55,6 +64,19 @@ public class GameController : MonoBehaviour
     public void addScore(int noteValue)
     {
         score += noteValue;
+    }
+
+    private void postGameScreen()
+    {
+        postGameScoreLabel.text = "Your Score: " + score;
+        postGameUI.SetActive(true);
+        
+    }
+
+    public void Restart()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+            
     }
 }
 
