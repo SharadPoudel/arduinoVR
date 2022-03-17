@@ -39,7 +39,7 @@ public class Note : MonoBehaviour
     }
 
 
-  /*  private void OnTriggerStay(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Button"))
         {
@@ -50,5 +50,5 @@ public class Note : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }*/
+    }
 }

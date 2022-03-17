@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-    [HideInInspector] public string sensorName;
+    public string sensorName;
     [HideInInspector] public bool buttonDown = false;
     [HideInInspector] public int pressForce = 0;
 
@@ -41,7 +41,7 @@ public class Button : MonoBehaviour
     public void PressButton(int force)
     {
         colorLocked = (Time.time <= buttonPressDuration);
-        pressing = (force >= 5);
+        pressing = (force >= 50);
 
 
         if (!colorLocked)
